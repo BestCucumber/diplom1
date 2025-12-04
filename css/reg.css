@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Стиль для тела страницы */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url(../assets/images/blizkii-vzglad-na-podrobnuu-morsinistuu-teksturu-bumagi.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  color: #fff; 
+}
+
+/* Стиль для контейнера формы */
+.container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 100%;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  
+  /* Анимация появления */
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 1s forwards;
+}
+
+/* Анимация для появления контейнера */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Заголовок формы */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+}
+
+/* Стиль для формы */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Метки */
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 1em;
+  color: #333;
+}
+
+/* Поля ввода */
+input {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Фокус на input */
+input:focus {
+  border-color: #d32f2f;
+  box-shadow: 0 0 8px rgba(211, 47, 47, 0.3);
+  outline: none;
+}
+
+/* Кнопка отправки */
+button {
+  padding: 14px;
+  background-color: #d32f2f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+}
+
+/* Ховер на кнопку */
+button:hover {
+  background-color: #b71c1c;
+  transform: translateY(-2px);
+}
+
+/* Ссылка под формой */
+a.link {
+  display: inline-block;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.95em;
+  color: #d32f2f;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+/* Ховер на ссылку */
+a.link:hover {
+  color: #a00000;
+}
+
+/* Стиль для шапки сайта */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
+  height: 60px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+/* Контейнер внутри шапки */
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Меню навигации */
+.menu {
+  display: flex;
+  gap: 15px;
+}
+
+/* Ссылки в меню */
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 12px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Ховер на пункты меню */
+.menu a:hover {
+  background-color: #333;
+  border-radius: 4px;
+}
+
+@media(max-width:768px){
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .hero-content {
+        font-size: 1.2em;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .ex-item img {
+        height: 150px;
+    }
+    .hero-card {
+        height: auto;
+    }
+}
