@@ -47,6 +47,7 @@ h3 {
     color: #fff;
     justify-content: center;
 }
+
 .auth-buttons a:hover{
     text-decoration: none;
     color: #b71c1c;
@@ -114,12 +115,14 @@ header {
     display: flex;
     gap: 15px;
 }
+
 .menu a {
     color: #fff;
     font-weight: 600;
     padding: 8px 12px;
     transition: 0.3s;
 }
+
 .menu a:hover {
     background-color: #333;
     border-radius: 4px;
@@ -130,6 +133,7 @@ header {
     display: flex;
     gap: 10px;
 }
+
 .auth-buttons button {
     padding: 8px 12px;
     font-size: 0.9em;
@@ -137,7 +141,7 @@ header {
 
 /* Основные секции */
 .hero-section {
-    background: url('../assets/images/soldatskii-slem-v-vintaznom-stile-naturmort.jpg') no-repeat center center/cover;
+    background: url('/assets/images/soldatskii-slem-v-vintaznom-stile-naturmort.jpg') no-repeat center center/cover;
     height: 70vh;
     justify-content: center;
     align-items: center;
