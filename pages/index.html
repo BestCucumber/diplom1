@@ -54,7 +54,7 @@
     <p>Этот виртуальный музей создан, чтобы сохранить память о подвиге советского народа в Великой Отечественной Войне. Здесь собраны истории, документы и свидетельства тех трагических и героических лет.</p>
     
     <div class="victory-timer">
-        <h3>До Дня Победы осталось:</h3>
+        <h3>🎗До Дня Победы осталось:</h3>
         <div class="timer">
             <div class="time-unit">
                 <span id="days">00</span>
@@ -128,7 +128,7 @@
     <div class="heroes-grid">
         <div class="hero-card">
             <div class="hero-image">
-                <img src="/assets/images/zoe.png" alt="Зоя Космодемьянская" />
+                <img src="/assets/images/heroes/зоя космодемьянская.png" alt="Зоя Космодемьянская" />
                 <div class="hero-medal">ГСС</div>
             </div>
             <div class="hero-content">
@@ -141,7 +141,7 @@
         
         <div class="hero-card">
             <div class="hero-image">
-                <img src="/assets/images/ivan.png" alt="Иван Кожедуб" />
+                <img src="/assets/images/heroes/иван кожедуб.png" alt="Иван Кожедуб" />
                 <div class="hero-medal triple">3×ГСС</div>
             </div>
             <div class="hero-content">
@@ -154,7 +154,7 @@
         
         <div class="hero-card">
             <div class="hero-image">
-                <img src="/assets/images/vasilisa.jpg" alt="Михаил Девятаев" />
+                <img src="/assets/images/heroes/михаил девятаев.jpg" alt="Михаил Девятаев" />
                 <div class="hero-medal">ГСС</div>
             </div>
             <div class="hero-content">
@@ -167,7 +167,7 @@
         
         <div class="hero-card">
             <div class="hero-image">
-                <img src="/assets/images/bio10.JPG" alt="Георгий Жуков" />
+                <img src="/assets/images/heroes/георгий жуков.JPG" alt="Георгий Жуков" />
                 <div class="hero-medal">Маршал</div>
             </div>
             <div class="hero-content">
@@ -349,7 +349,7 @@
             
             <div class="contact-details">
                 <div class="contact-item">
-                    <div>
+                    <div class="email">
                         <strong>Email:</strong>
                         <a href="mailto:kpk2025vov@email.ru">kpk2025vov@email.ru</a>
                     </div>
@@ -361,13 +361,7 @@
                         <p>ГАПОУ "Камышинский Политехнический Колледж"</p>
                     </div>
                 </div>
-                
-                <div class="contact-item">
-                    <div>
-                        <strong>Руководитель проекта:</strong>
-                        <p>Преподаватель истории [ФИО]</p>
-                    </div>
-                </div>
+
             </div>
         </div>
         
@@ -513,52 +507,6 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     
     setInterval(showNextQuote, 5000);
-
-    // Интерактивная карта
-    const mapPoints = document.querySelectorAll('.map-point');
-    const mapTitle = document.getElementById('map-title');
-    const mapDesc = document.getElementById('map-desc');
-    const mapYear = document.getElementById('map-year');
-    
-    const battleInfo = {
-        moscow: {
-            title: "Битва за Москву",
-            desc: "Оборонительная (30 сентября — 5 декабря 1941) и наступательная (5 декабря 1941 — 7 января 1942) операции. Первое крупное поражение вермахта во Второй мировой войне.",
-            year: "1941-1942"
-        },
-        stalingrad: {
-            title: "Сталинградская битва",
-            desc: "Крупнейшее сухопутное сражение в истории. Завершилось окружением и разгромом 6-й армии вермахта. Коренной перелом в войне.",
-            year: "1942-1943"
-        },
-        leningrad: {
-            title: "Блокада Ленинграда",
-            desc: "872 дня блокады (8 сентября 1941 — 27 января 1944). Один из самых трагических эпизодов войны. Погибло около 1,5 млн человек.",
-            year: "1941-1944"
-        },
-        kursk: {
-            title: "Курская битва",
-            desc: "Крупнейшее танковое сражение в истории. Последняя попытка вермахта провести крупное наступление на Восточном фронте.",
-            year: "1943"
-        },
-        berlin: {
-            title: "Берлинская операция",
-            desc: "Завершающая стратегическая наступательная операция. Штурм Берлина и водружение Знамени Победы над Рейхстагом.",
-            year: "1945"
-        }
-    };
-    
-    mapPoints.forEach(point => {
-        point.addEventListener('click', function() {
-            const battle = this.classList[1];
-            mapTitle.textContent = battleInfo[battle].title;
-            mapDesc.textContent = battleInfo[battle].desc;
-            mapYear.textContent = battleInfo[battle].year;
-            
-            mapPoints.forEach(p => p.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
 
     // Поиск в архиве
     document.getElementById('search-btn').addEventListener('click', function() {

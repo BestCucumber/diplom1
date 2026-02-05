@@ -3,7 +3,7 @@
 /* Шапка страницы */
 .heroes-header {
     background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.75)),
-                url('/assets/images/heroes-bg.jpg') no-repeat center center/cover;
+                url('/assets/images/heroes/fon-heroes.jpg') no-repeat center center/cover;
     padding: 80px 20px 60px;
     text-align: center;
     color: #fff;

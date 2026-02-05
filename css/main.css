@@ -120,14 +120,25 @@ h3 {
   font-size: 0.9rem;
 }
 
-a {
+.email a{
   color: var(--primary-red);
   text-decoration: none;
   transition: var(--transition);
 }
 
+.email a:hover{
+  color: #949494;
+}
+
+a {
+  color: var(--primary-light);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+
 a:hover {
-  color: #d32f2f;
+  color: #ffffff;
 }
 
 /* ===== ШАПКА ===== */
