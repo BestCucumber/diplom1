@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="stylesheet" href="/css/heroes.css" />
+<title>Все герои Великой Отечественной войны | Виртуальный музей ГАПОУ КПК</title>
+</head>
+<body>
+<header>
+    <div class="container header-container">
+        <nav class="menu">
+            <a href="/index.html#hero">ГЛАВНАЯ</a>
+            <a href="/index.html#ex">ЭКСПОЗИЦИЯ</a>
+            <a href="/index.html#heroes" class="active">ИСТОРИИ ГЕРОЕВ</a>
+            <a href="/index.html#calendar">ДАТЫ</a>
+            <a href="/index.html#kamyshin">КАМЫШИН</a>
+            <a href="/index.html#archive">АРХИВ</a>
+            <a href="/index.html#about">О МУЗЕЕ</a>
+            <a href="/index.html#contact">КОНТАКТЫ</a>
+            <a href="/index.html#news">НОВОСТИ</a>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn"><a href="/pages/sign-in.html">Войти</a></button>
+        </div>
+    </div>
+</header>
+
+<section class="heroes-header">
+    <div class="container">
+        <h1>Герои Великой Отечественной войны</h1>
+        <p>Подвиги, которые навсегда останутся в памяти поколений</p>
+        <div class="header-stats">
+            <div class="header-stat">
+                <span>27</span>
+                <small>героев в коллекции</small>
+            </div>
+            <div class="header-stat">
+                <span>156</span>
+                <small>наград у героев</small>
+            </div>
+            <div class="header-stat">
+                <span>1941-1945</span>
+                <small>годы подвига</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="heroes-filters container">
+    <div class="filters-container">
+        <div class="filter-group">
+            <h3>Фильтровать по:</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Все герои</button>
+                <button class="filter-btn" data-filter="infantry">Пехота</button>
+                <button class="filter-btn" data-filter="aviation">Авиация</button>
+                <button class="filter-btn" data-filter="navy">Флот</button>
+                <button class="filter-btn" data-filter="partisan">Партизаны</button>
+                <button class="filter-btn" data-filter="marshal">Маршалы</button>
+            </div>
+        </div>
+        
+        <div class="search-box">
+            <input type="text" placeholder="Поиск героя..." id="hero-search">
+            <button class="search-btn">🔍</button>
+        </div>
+    </div>
+</section>
+
+<section class="all-heroes container">
+    <div class="heroes-grid">
+        <!-- Герой 1 -->
+        <article class="hero-card" data-category="partisan">
+            <div class="hero-card-image">
+                <img src="/assets/images/zoe.png" alt="Зоя Космодемьянская">
+                <div class="hero-badge">ГСС</div>
+                <div class="hero-years">1923-1941</div>
+            </div>
+            <div class="hero-card-content">
+                <h3>Зоя Космодемьянская</h3>
+                <div class="hero-meta">
+                    <span class="hero-rank">Партизанка</span>
+                    <span class="hero-age">18 лет</span>
+                </div>
+                <p class="hero-excerpt">Первая женщина — Герой Советского Союза в годы войны. Казнена фашистами 29 ноября 1941 года.</p>
+                <div class="hero-awards">
+                    <span class="award">Герой Советского Союза</span>
+                    <span class="award">Орден Ленина</span>
+                </div>
+                <a href="/html/bio1.html" class="btn-small">Читать подробнее →</a>
+            </div>
+        </article>
+
+        <!-- Герой 2 -->
+        <article class="hero-card" data-category="aviation">
+            <div class="hero-card-image">
+                <img src="/assets/images/ivan.png" alt="Иван Кожедуб">
+                <div class="hero-badge triple">3×ГСС</div>
+                <div class="hero-years">1920-1991</div>
+            </div>
+            <div class="hero-card-content">
+                <h3>Иван Кожедуб</h3>
+                <div class="hero-meta">
+                    <span class="hero-rank">Летчик-ас</span>
+                    <span class="hero-age">64 победы</span>
+                </div>
+                <p class="hero-excerpt">Трижды Герой Советского Союза. Самый результативный летчик-истребитель в авиации союзников.</p>
+                <div class="hero-awards">
+                    <span class="award">3× Герой Советского Союза</span>
+                    <span class="award">7 орденов Красного Знамени</span>
+                </div>
+                <a href="/html/bio2.html" class="btn-small">Читать подробнее →</a>
+            </div>
+        </article>
+
+        <!-- Герой 3 -->
+        <article class="hero-card" data-category="aviation">
+            <div class="hero-card-image">
+                <img src="/assets/images/vasilisa.jpg" alt="Михаил Девятаев">
+                <div class="hero-badge">ГСС</div>
+                <div class="hero-years">1917-2002</div>
+            </div>
+            <div class="hero-card-content">
+                <h3>Михаил Девятаев</h3>
+                <div class="hero-meta">
+                    <span class="hero-rank">Летчик</span>
+                    <span class="hero-age">Пленный</span>
+                </div>
+                <p class="hero-excerpt">Совершил побег из концлагеря на угнанном немецком бомбардировщике вместе с 9 товарищами.</p>
+                <div class="hero-awards">
+                    <span class="award">Герой Советского Союза</span>
+                    <span class="award">Орден Ленина</span>
+                </div>
+                <a href="/html/bio3.html" class="btn-small">Читать подробнее →</a>
+            </div>
+        </article>
+
+        <!-- Герой 4 -->
+        <article class="hero-card" data-category="marshal">
+            <div class="hero-card-image">
+                <img src="/assets/images/bio10.JPG" alt="Георгий Жуков">
+                <div class="hero-badge marshal">Маршал</div>
+                <div class="hero-years">1896-1974</div>
+            </div>
+            <div class="hero-card-content">
+                <h3>Георгий Жуков</h3>
+                <div class="hero-meta">
+                    <span class="hero-rank">Маршал Победы</span>
+                    <span class="hero-age">4×ГСС</span>
+                </div>
+                <p class="hero-excerpt">Четырежды Герой Советского Союза. Принимал капитуляцию Германии и Парад Победы 1945 года.</p>
+                <div class="hero-awards">
+                    <span class="award">4× Герой Советского Союза</span>
+                    <span class="award">6 орденов Ленина</span>
+                </div>
+                <a href="/html/bio4.html" class="btn-small">Читать подробнее →</a>
+            </div>
+        </article>
+
+        <!-- Герой 5 -->
+        <article class="hero-card" data-category="infantry">
+            <div class="hero-card-image">
+                <img src="/assets/images/hero5.jpg" alt="Александр Матросов">
+                <div class="hero-badge">ГСС</div>
+                <div class="hero-years">1924-1943</div>
+            </div>
+            <div class="hero-card-content">
+                <h3>Александр Матросов</h3>
+                <div class="hero-meta">
+                    <span class="hero-rank">Стрелок</span>
+                    <span class="hero-age">19 лет</span>
+                </div>
+                <p class="hero-excerpt">Закрыл своим телом амбразуру немецкого дзота, обеспечив успех атаки подразделения.</p>
+                <div class="hero-awards">
+                    <span class="award">Герой Советского Союза</span>
+                    <span class="award">Орден Ленина</span>
+                </div>
+                <a href="/html/bio5.html" class="btn-small">Читать подробнее →</a>
+            </div>
+        </article>
+
+        <!-- Герой 6 -->
+        <article class="hero-card" data-category="navy">
+            <div class="hero-card-image">
+                <img src="/assets/images/hero6.jpg" alt="Александр Маринеско">
+                <div class="hero-badge">ГСС</div>
+                <div class="hero-years">1913-1963</div>
+            </div>
+            <div class="hero-card-content">
+                <h3>Александр Маринеско</h3>
+                <div class="hero-meta">
+                    <span class="hero-rank">Подводник</span>
+                    <span class="hero-age">Капитан 3 ранга</span>
+                </div>
+                <p class="hero-excerpt">Потопил немецкий лайнер "Вильгельм Густлофф" — крупнейшую по тоннажу победу советских подводников.</p>
+                <div class="hero-awards">
+                    <span class="award">Герой Советского Союза</span>
+                    <span class="award">Орден Ленина</span>
+                </div>
+                <a href="/html/bio6.html" class="btn-small">Читать подробнее →</a>
+            </div>
+        </article>
+
+        <!-- Герой 7 -->
+        <article class="hero-card" data-category="infantry">
+            <div class="hero-card-image">
+                <img src="/assets/images/hero7.jpg" alt="Василий Зайцев">
+                <div class="hero-badge">ГСС</div>
+                <div class="hero-years">1915-1991</div>
+            </div>
+            <div class="hero-card-content">
+                <h3>Василий Зайцев</h3>
+                <div class="hero-meta">
+                    <span class="hero-rank">Снайпер</span>
+                    <span class="hero-age">242 подтвержденных</span>
+                </div>
+                <p class="hero-excerpt">Легендарный снайпер Сталинградской битвы. Уничтожил 242 солдата и офицера противника.</p>
+                <div class="hero-awards">
+                    <span class="award">Герой Советского Союза</span>
+                    <span class="award">Орден Ленина</span>
+                </div>
+                <a href="/html/bio7.html" class="btn-small">Читать подробнее →</a>
+            </div>
+        </article>
+
+        <!-- Герой 8 -->
+        <article class="hero-card" data-category="aviation">
+            <div class="hero-card-image">
+                <img src="/assets/images/hero8.jpg" alt="Алексей Маресьев">
+                <div class="hero-badge">ГСС</div>
+                <div class="hero-years">1916-2001</div>
+            </div>
+            <div class="hero-card-content">
+                <h3>Алексей Маресьев</h3>
+                <div class="hero-meta">
+                    <span class="hero-rank">Летчик</span>
+                    <span class="hero-age">Без ног</span>
+                </div>
+                <p class="hero-excerpt">После ампутации обеих ног вернулся в истребительную авиацию и сбил 7 самолетов врага.</p>
+                <div class="hero-awards">
+                    <span class="award">Герой Советского Союза</span>
+                    <span class="award">Орден Ленина</span>
+                </div>
+                <a href="/html/bio8.html" class="btn-small">Читать подробнее →</a>
+            </div>
+        </article>
+
+        <!-- Герой 9 -->
+        <article class="hero-card" data-category="partisan">
+            <div class="hero-card-image">
+                <img src="/assets/images/hero9.jpg" alt="Вера Волошина">
+                <div class="hero-badge">ГСС</div>
+                <div class="hero-years">1919-1941</div>
+            </div>
+            <div class="hero-card-content">
+                <h3>Вера Волошина</h3>
+                <div class="hero-meta">
+                    <span class="hero-rank">Партизанка</span>
+                    <span class="hero-age">22 года</span>
+                </div>
+                <p class="hero-excerpt">Разведчица и партизанка. Казнена фашистами в один день с Зоей Космодемьянской.</p>
+                <div class="hero-awards">
+                    <span class="award">Герой Советского Союза</span>
+                    <span class="award">Орден Ленина</span>
+                </div>
+                <a href="/html/bio9.html" class="btn-small">Читать подробнее →</a>
+            </div>
+        </article>
+
+        <!-- Герой 10 -->
+        <article class="hero-card" data-category="marshal">
+            <div class="hero-card-image">
+                <img src="/assets/images/hero10.jpg" alt="Константин Рокоссовский">
+                <div class="hero-badge marshal">Маршал</div>
+                <div class="hero-years">1896-1968</div>
+            </div>
+            <div class="hero-card-content">
+                <h3>Константин Рокоссовский</h3>
+                <div class="hero-meta">
+                    <span class="hero-rank">Маршал</span>
+                    <span class="hero-age">2×ГСС</span>
+                </div>
+                <p class="hero-excerpt">Командовал парадом Победы. Один из самых талантливых полководцев Второй мировой войны.</p>
+                <div class="hero-awards">
+                    <span class="award">2× Герой Советского Союза</span>
+                    <span class="award">7 орденов Ленина</span>
+                </div>
+                <a href="/html/bio10.html" class="btn-small">Читать подробнее →</a>
+            </div>
+        </article>
+    </div>
+
+    <div class="pagination">
+        <a href="#" class="page-btn active">1</a>
+        <a href="#" class="page-btn">2</a>
+        <a href="#" class="page-btn">3</a>
+        <span class="page-dots">...</span>
+        <a href="#" class="page-btn">→</a>
+    </div>
+</section>
+
+<section class="heroes-quote container">
+    <div class="quote-container">
+        <blockquote>
+            "Герой — это человек, который в решительный момент делает то, что нужно делать в интересах человеческого общества."
+        </blockquote>
+        <cite>— Юлиус Фучик</cite>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content container">
+        <div class="footer-section">
+            <h4>Виртуальный музей ВОВ</h4>
+            <p>Проект ГАПОУ "Камышинский Политехнический Колледж" по сохранению исторической памяти</p>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Быстрые ссылки</h4>
+            <a href="/index.html#ex">Экспозиции</a>
+            <a href="/pages/heroes.html" class="active">Герои</a>
+            <a href="/index.html#archive">Архив</a>
+            <a href="/index.html#news">Новости</a>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Партнеры</h4>
+            <p>ГАПОУ "КПК"</p>
+            <p>Камышинский краеведческий музей</p>
+            <p>Совет ветеранов г. Камышина</p>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Мы в соцсетях</h4>
+            <div class="social-links">
+                <a href="#" class="social">VK</a>
+                <a href="#" class="social">Telegram</a>
+                <a href="#" class="social">YouTube</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>© 2026 Виртуальный музей Великой Отечественной войны. ГАПОУ "Камышинский Политехнический Колледж"</p>
+        <p class="student-project">Студенческий проект | Все права защищены</p>
+    </div>
+</footer>
+
+<script src="/js/heroes.js"></script>
+</body>
+</html>
