@@ -531,9 +531,11 @@ header {
 }
 
 .hero-content p {
-  color: var(--gray-dark);
-  margin-bottom: 20px;
-  flex-grow: 1;
+    color: var(--gray-dark);
+    margin-bottom: 15px;
+    flex-grow: 1;
+    font-size: 1.1rem;
+    line-height: 1.4;
 }
 
 .all-heroes-link {

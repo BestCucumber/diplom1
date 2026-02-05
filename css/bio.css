@@ -1,97 +1,206 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #fafafa;
-    color: #333;
+/* ===== БИОГРАФИЯ ГЕРОЯ ===== */
+.bio-page {
+    background: #fff;
+    min-height: 100vh;
 }
 
 .container {
+    width: 90%;
     max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
-.header h1 {
+/* Шапка биографии */
+.header {
     text-align: center;
-    font-size: 3em;
-    margin-bottom: 20px;
-    color: #b71c1c;
-}
-
-.date {
-    text-align: center;
-    font-style: italic;
-    font-size: 1.2em;
-    color: #666;
+    padding: 40px 20px 20px;
+    border-bottom: 3px solid #b71c1c;
     margin-bottom: 40px;
 }
 
-.content .photo-section img {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-    object-fit: cover;
+.header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    color: #222;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.bio-section h2 {
-    font-size: 2em;
-    margin-top: 40px;
+.date {
+    font-size: 1.2rem;
+    color: #666;
+    font-style: italic;
     margin-bottom: 20px;
-    color: #b71c1c;
 }
 
-.bio-section p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 20px;
+/* Основное содержимое */
+.content {
+    padding: 20px 0;
+}
+
+.photo-section {
+    margin: 30px auto;
+    max-width: 800px;
+    text-align: center;
 }
 
 .photo {
     width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin-bottom: 20px;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-.return-btn{
-    display: flex;
-    background-color: #666;
-    color: #ddd;
-    border: none;
-    height: 40px;
-    width: 200px;
-    border-radius: 4px;
-    justify-self: center;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+/* Секции биографии */
+.bio-section {
+    margin-bottom: 60px;
 }
 
-.return-btn a{
-    display: flex;
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
+.bio-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #b71c1c;
+    position: relative;
+}
+
+.bio-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background: #b71c1c;
+}
+
+.bio-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+/* Цитаты */
+blockquote {
+    background: #f8f9fa;
+    border-left: 4px solid #b71c1c;
+    padding: 25px 30px;
+    margin: 30px 0;
+    font-style: italic;
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    border-radius: 0 8px 8px 0;
+}
+
+blockquote::before {
+    content: '"';
+    font-size: 2rem;
+    color: #b71c1c;
+    margin-right: 10px;
+    font-family: serif;
+}
+
+/* Подписи к фото */
+.photo-caption {
     text-align: center;
-    justify-content: center;
-    justify-self: center;
-    align-items: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    font-style: italic;
+    padding: 0 20px;
 }
+
+/* Кнопка возврата */
+.return-btn {
+    display: inline-block;
+    margin: 40px 0;
+    padding: 15px 30px;
+    background: #b71c1c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.return-btn:hover {
+    background: #d32f2f;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(183, 28, 28, 0.3);
+}
+
+.return-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.return-btn a:hover {
+    color: white;
+}
+
+/* Футер */
 .footer {
     text-align: center;
-    font-size: 1.2em;
+    padding: 30px 0;
+    margin-top: 60px;
+    border-top: 1px solid #eee;
     color: #666;
-    margin-top: 40px;
-    padding: 20px 0;
-    background-color: #fff;
-    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+}
 
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .date {
+        font-size: 1rem;
+    }
+    
+    .bio-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .bio-section p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .photo {
+        max-height: 300px;
+    }
+    
+    blockquote {
+        padding: 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .bio-section h2 {
+        font-size: 1.4rem;
+    }
+    
+    .return-btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
 }
