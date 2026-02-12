@@ -66,7 +66,9 @@
                         <div class="photo-title">Гитлеровец поджигает дома в деревне.</div>
                         <div class="photo-date">1941 г.</div>
                     </div>
-                    <button class="open-btn">Открыть →</button>
+                    <a href="#" class="open-btn"
+                    data-image="css/img/6.jpg" data-description="Гитлеровец поджигает дома в деревне">
+                         Открыть →</a>
                 </div>
 
                 <div class="photo-card">
@@ -190,5 +192,15 @@
             </div>
         </div>
     </section>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <img src="" id="modal-image" alt="">
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
+    <script src="archive.js"></script>
 </body>
 </html>
