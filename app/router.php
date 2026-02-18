@@ -10,8 +10,8 @@ class Router {
         $page = $this->getPageName();
         
         if (isset($this->routes[$page])) {
-            $this->showPage($this->routes[$page]);
-        } else {
+            $this->callAction($this->routes[$page]);
+        }else {
             $this->showError();
         }
     }
@@ -29,19 +29,35 @@ class Router {
         
         return empty($uri) ? '/' : $uri;
     }
-    
-    private function showPage($filePath) {
-        if (file_exists($filePath)) {
-            include $filePath;
-        } else {
-            $this->showError();
+
+    private function callAction($route) {
+        $controllerName = $route[0];
+        $methodName = $route[1];
+
+        $controllerFile = __DIR__ . '/' . $controllerName . '.php';
+        // echo "ищу файл: " . realpath($controllerFile) ?: "файл не найден по пути: " . __DIR__ . "/" . $controllerFile;
+        // exit;
+
+        if (file_exists($controllerFile)) {
+            require_once $controllerFile;
+            $controller = new $controllerName();
+
+            if (method_exists($controller, $methodName)) {
+                $controller->$methodName();
+            }else {
+                $this->showError("Метод {$methodName} не найден");
+            }
+        }else {
+            $this->showError("Контроллер {$controllerName} не найден");
         }
     }
     
-    private function showError() {
+    private function showError($message = null) {
         http_response_code(404);
         echo '<h1>404 - Страница не найдена</h1>';
-        echo '<p>Извините, такой страницы нет.</p>';
+        if ($message) {
+            echo '<p>' . htmlspecialchars($message) . '</p>';
+        }
         echo '<a href="/">На главную</a>';
     }
 }

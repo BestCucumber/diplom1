@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Регистрация | Виртуальный музей ГАПОУ КПК</title>
+<link rel="stylesheet" href="../css/main.css" />
+<link rel="stylesheet" href="../css/reg.css" />
+</head>
+<body>
+<header>
+    <div class="container header-container">
+        <nav class="menu">
+            <a href="../index.html#hero">ГЛАВНАЯ</a>
+            <a href="../index.html#ex">ЭКСПОЗИЦИЯ</a>
+            <a href="../pages/heroes.html">ИСТОРИИ ГЕРОЕВ</a>
+            <a href="../index.html#calendar">ДАТЫ</a>
+            <a href="../index.html#kamyshin">КАМЫШИН</a>
+            <a href="../index.html#archive">АРХИВ</a>
+            <a href="../index.html#about">О МУЗЕЕ</a>
+            <a href="../index.html#contact">КОНТАКТЫ</a>
+            <a href="../index.html#news">НОВОСТИ</a>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn"><a href="sign-in.html">Войти</a></button>
+        </div>
+    </div>
+</header>
+
+<!-- Содержимое вашей страницы регистрации -->
+<div class="container">
+  <div class="title">Регистрация</div>
+   <form action="add.php" method="POST">
+    <label for="name">Имя</label>
+    <input type="email" id="fio" name="fio" placeholder="Введите ваше имя пользователя" required />
+
+    <label for="login">Логин</label>
+    <input type="email" id="login" name="login" placeholder="Введите ваш логин" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Введите ваш email" required />
+
+    <label for="password">Пароль</label>
+    <input type="email" id="password" name="password" placeholder="Введите ваш пароль" required />
+    
+    <label for="password">Повторить пароль</label>
+    <input type="email" id="repeatpassword" name="repeatpassword" placeholder="Повторите ваш пароль" required />
+
+    <button type="submit">Зарегистрироваться</button>
+    <a class="link" href="sign-in.html">Уже есть аккаунт? Войти</a>
+  </form>
+</div>
+
+<footer>
+    <div class="footer-content container">
+        <div class="footer-section">
+            <h4>Виртуальный музей ВОВ</h4>
+            <p>Проект ГАПОУ "Камышинский Политехнический Колледж" по сохранению исторической памяти</p>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Быстрые ссылки</h4>
+            <a href="../index.html#ex">Экспозиции</a>
+            <a href="../pages/heroes.html">Герои</a>
+            <a href="../index.html#archive">Архив</a>
+            <a href="../index.html#news">НОВОСТИ</a>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Партнеры</h4>
+            <p>ГАПОУ "КПК"</p>
+            <p>Камышинский краеведческий музей</p>
+            <p>Совет ветеранов г. Камышина</p>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Мы в соцсетях</h4>
+            <div class="social-links">
+                <a href="#" class="social">VK</a>
+                <a href="#" class="social">Telegram</a>
+                <a href="#" class="social">YouTube</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>© 2024 Виртуальный музей Великой Отечественной войны. ГАПОУ "Камышинский Политехнический Колледж"</p>
+        <p class="student-project">Студенческий проект | Все права защищены</p>
+    </div>
+</footer>
+
+<script>
+// Плавная прокрутка для навигации
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if(targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if(targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
