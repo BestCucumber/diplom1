@@ -1,44 +1,53 @@
+<?php
+session_start();
+require_once('bd.php');
+
+if(!isset($_SESSION['user_id'])) {
+    header("Location: sign-in.html");
+    exit;
+}
+
+$user_id = $_SESSION['user_id'];
+
+$stmt = $pdo->prepare('SELECT * FROM users WHERE id = :id');
+$stmt->execute([':id' => $user_id]);
+$user = $stmt->fetch();
+
+?>
+
+
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Авторизация</title>
-<link rel="stylesheet" href="/css/login.css" />
-<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/profile.css">
+  <title>Профиль пользователя</title>
 </head>
 <body>
-<header>
+  <header>
     <div class="container-head header-container">
         <nav class="menu">
-            <a href="/pages/index.html#hero">ГЛАВНАЯ</a>
-            <a href="/pages/index.html#ex">ЭКСПОЗИЦИЯ</a>
-            <a href="/pages/index.html#heroes">ИСТОРИИ ГЕРОЕВ</a>
-            <a href="/pages/index.html#calendar">ДАТЫ</a>
-            <a href="/pages/index.html#kamyshin">КАМЫШИН</a>
-            <a href="/pages/index.html#archive">АРХИВ</a>
-            <a href="/pages/index.html#about">О МУЗЕЕ</a>
-            <a href="/pages/index.html#contact">КОНТАКТЫ</a>
-            <a href="/pages/index.html#news">НОВОСТИ</a>
+            <a href="#hero">ГЛАВНАЯ</a>
+            <a href="#ex">ЭКСПОЗИЦИЯ</a>
+            <a href="#heroes">ИСТОРИИ ГЕРОЕВ</a>
+            <a href="#calendar">ДАТЫ</a>
+            <a href="#kamyshin">КАМЫШИН</a>
+            <a href="#archive">АРХИВ</a>
+            <a href="#about">О МУЗЕЕ</a>
+            <a href="#contact">КОНТАКТЫ</a>
+            <a href="#news">НОВОСТИ</a>
         </nav>
+        <div class="user-id">
+            <a href="/profile.php"><img src="/assets/images/Иконка.jpg" alt="icons"></a>
+        </div>
+        <div class="auth-buttons">
+            <button class="btn"><a href="/pages/sign-in.html">Выйти</a></button>
+        </div>
     </div>
 </header>
 <main>
-  <main-content>
-    <div class="container">
-  <div class="title">Авторизация</div>
-  <form action="/auto.php" method="POST">
-    <label for="login">Логин</label>
-    <input type="text" id="login" name="login" placeholder="Введите ваш логин" required />
-
-    <label for="password">Пароль</label>
-    <input type="password" id="password" name="password" placeholder="Введите ваш пароль" required />
-
-    <button type="submit">Авторизоваться</button>
-    <a class="link" href="sign-up.html">Еще нет аккаунта? Зарегистрироваться</a>
-  </form>
-</div>
-  </main-content>
+    <div class="main-content"></div>
 </main>
 <footer>
     <div class="footer-content foot-container">

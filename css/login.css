@@ -134,7 +134,7 @@ button {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
   text-align: center;
-  width: 27rem;
+  width: 24rem;
 }
 
 /* Ховер на кнопку */
@@ -227,7 +227,7 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30rem 0;
+  padding: 20rem 0;
 }
 
 .main-contetnt, main{

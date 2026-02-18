@@ -6,8 +6,8 @@ const closeBtn = document.querySelector('.close');
 
 const openButtons = document.querySelectorAll('.open-btn');
 
-openButtons.forEach(button => {
-  button.addEventListener('click', function(e){
+openButtons.forEach(a => {
+  a.addEventListener('click', function(e){
     e.preventDefault();
 
     const imageScr = this.dataset.image;
