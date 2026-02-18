@@ -15,7 +15,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
 if($user)
 {
     $_SESSION['user_id'] = $user['id'];
-    header('Location:profile.php?user_id=' . $user['id']);
+    header('Location: /profile');
     exit();
 } else
 {

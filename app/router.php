@@ -3,7 +3,7 @@ class Router {
     private $routes;
     
     public function __construct() {
-        $this->routes = require_once 'routes.php';
+        $this->routes = require_once __DIR__ . '/routes.php';
     }
     
     public function run() {
@@ -11,7 +11,7 @@ class Router {
         
         if (isset($this->routes[$page])) {
             $this->callAction($this->routes[$page]);
-        }else {
+        } else {
             $this->showError();
         }
     }
@@ -19,15 +19,13 @@ class Router {
     private function getPageName() {
         $uri = $_SERVER['REQUEST_URI'] ?? '/';
         
-        // Убираем GET-параметры
         if (strpos($uri, '?') !== false) {
             $uri = substr($uri, 0, strpos($uri, '?'));
         }
         
-        // Убираем начальный и конечный слэши
         $uri = trim($uri, '/');
         
-        return empty($uri) ? '/' : $uri;
+        return '/' . $uri;
     }
 
     private function callAction($route) {
@@ -35,8 +33,6 @@ class Router {
         $methodName = $route[1];
 
         $controllerFile = __DIR__ . '/' . $controllerName . '.php';
-        // echo "ищу файл: " . realpath($controllerFile) ?: "файл не найден по пути: " . __DIR__ . "/" . $controllerFile;
-        // exit;
 
         if (file_exists($controllerFile)) {
             require_once $controllerFile;
@@ -44,10 +40,10 @@ class Router {
 
             if (method_exists($controller, $methodName)) {
                 $controller->$methodName();
-            }else {
-                $this->showError("Метод {$methodName} не найден");
+            } else {
+                $controller->$methodName(); // Сработает __call
             }
-        }else {
+        } else {
             $this->showError("Контроллер {$controllerName} не найден");
         }
     }
@@ -61,4 +57,3 @@ class Router {
         echo '<a href="/">На главную</a>';
     }
 }
-?>
