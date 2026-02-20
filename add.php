@@ -27,7 +27,7 @@ try
         ':repeat_password' => $repeat_password
     ]);
 
-    header('Location:login.php?message=registration_success');
+    header('Location:add.php?message=registration_success');
 } catch(PDOException $e)
 {
     die('Ошибка: ' . $e->getMessage());

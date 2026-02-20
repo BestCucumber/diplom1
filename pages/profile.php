@@ -46,7 +46,7 @@ try {
 </head>
 <body>
     <header>
-        <!-- Шапка остается без изменений -->
+        <!-- Шапка -->
         <div class="container-head header-container">
             <nav class="menu">
                 <a href="/#hero">ГЛАВНАЯ</a>

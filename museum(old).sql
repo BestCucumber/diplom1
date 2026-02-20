@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 19 2026 г., 13:08
+-- Время создания: Фев 18 2026 г., 11:45
 -- Версия сервера: 10.3.13-MariaDB-log
 -- Версия PHP: 7.1.32
 
@@ -25,25 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `bio`
---
-
-CREATE TABLE `bio` (
-  `id` int(11) NOT NULL,
-  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Имя героя',
-  `header_title` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Заголовок',
-  `photo_1` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `body_title` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `body_content` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `photo_2` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `photo_3` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `body_content_2` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `body_content_3` text COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Структура таблицы `users`
 --
 
@@ -61,9 +42,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `fio`, `login`, `email`, `password`, `repeat_password`) VALUES
-(4, 'fgjf', 'fgjfj', 'fjjfg@hmk', '1234', '1234'),
-(5, 'abra kadabra', 'myLogin', 'myEmail@mail.ru', 'password', 'password'),
-(6, 'chelovek', 'chelove', 'chelovek@mail.ru', 'chelovek', '');
+(4, 'fgjf', 'fgjfj', 'fjjfg@hmk', '1234', '1234');
 
 -- --------------------------------------------------------
 
@@ -87,12 +66,6 @@ CREATE TABLE `zaiavki` (
 --
 
 --
--- Индексы таблицы `bio`
---
-ALTER TABLE `bio`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
@@ -110,16 +83,10 @@ ALTER TABLE `zaiavki`
 --
 
 --
--- AUTO_INCREMENT для таблицы `bio`
---
-ALTER TABLE `bio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT для таблицы `zaiavki`

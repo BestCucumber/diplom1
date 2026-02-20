@@ -596,6 +596,7 @@ header {
 .calendar-item {
   background: #fafafa;
   border-radius: 8px;
+  width: 40rem;
   padding: 25px;
   transition: all 0.25s ease;
   border: 1px solid #eee;
@@ -665,6 +666,7 @@ header {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow);
+  margin-bottom: 30px;
 }
 
 .city-photo img {
