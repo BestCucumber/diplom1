@@ -1,16 +1,32 @@
 <?php
 session_start();
-require_once('bd.php');
+require_once('../bd.php');
 
 $id = (int)$_GET['id'];
 
-$info = $conn->query("SELECT name, head_ite, star_week FROM bio WHERE id = $id")->fetch_assoc();
+$stmt = $pdo->prepare("SELECT name, header_title, star_week FROM bio WHERE id = ?");
+$stmt->execute([$id]);
+$info = $stmt->fetch();
+
+if (!$info) {
+  die("Герой не найден");
+}
 
 echo "<h1>" . htmlspecialchars($info['name']) . "</h1>";
 
-$sections = $conn->query("SELECT content_type, content FROM bio_content WHERE bio_id = $id ORDER BY sort_order");
+if(!empty($info['header_title'])) {
+  echo "<p><strong>" . htmlspecialchars($info['header_title']) . "</strong></p>";
+}
+if(!empty($info['star_week'])) {
+  echo "<p>Годы жизни: " . htmlspecialchars($info['star_week']) . "</p>";
+}
 
-while ($sec = $sections->fetch_assoc()) {
+$stmt = $pdo->prepare("SELECT content_type, content FROM bio_content WHERE bio_id = ? ORDER BY sort_order");
+$stmt->execute([$id]);
+$sections = $stmt->fetchAll();
+
+if(!empty($sections) && is_array($sections)) {
+foreach ($sections as $sec) {
   if($sec['content_type'] == 'title') {
     echo "<h2>" . htmlspecialchars($sec['content']) . "</h2>";
   }elseif($sec['content_type'] === 'text') {
@@ -18,4 +34,5 @@ while ($sec = $sections->fetch_assoc()) {
   }elseif($sec['content_type'] === 'photo') {
     echo "<p>" . nl2br(htmlspecialchars($sec['content'])) . "</p>";
   }
+}
 }
