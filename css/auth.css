@@ -1,0 +1,172 @@
+:root {
+  --primary-red: #b71c1c;
+  --primary-dark: #222;
+  --primary-light: #fff;
+  --accent-gold: #ffffff;
+  --gray-light: #f5f5f5;
+  --gray-medium: #e0e0e0;
+  --gray-dark: #666;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 20px rgba(183, 28, 28, 0.15);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Стиль для тела страницы */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url(../assets/images/blizkii-vzglad-na-podrobnuu-morsinistuu-teksturu-bumagi.png);
+  background-size: cover;
+  color: #fff; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== ОСНОВНОЙ КОНТЕНТ ===== */
+.auth-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  margin-top: 70px; /* ОТСТУП ПОД HEADER - ЭТО ГЛАВНОЕ */
+  min-height: calc(100vh - 70px);
+  box-sizing: border-box;
+  margin-top: 100px !important;
+}
+
+/* Контейнер формы */
+.auth-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  
+  /* Анимация появления */
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+/* Анимация для появления контейнера */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Заголовок формы */
+.auth-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+}
+
+/* Стиль для формы */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Метки */
+.auth-label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 1em;
+  color: #333;
+}
+
+/* Поля ввода */
+.auth-input {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+/* Фокус на input */
+.auth-input:focus {
+  border-color: #d32f2f;
+  box-shadow: 0 0 8px rgba(211, 47, 47, 0.3);
+  outline: none;
+}
+
+/* Кнопка отправки */
+.auth-button {
+  padding: 12px;
+  background-color: #d32f2f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+  width: 100%;
+}
+
+/* Ховер на кнопку */
+.auth-button:hover {
+  background-color: #b71c1c;
+  transform: translateY(-2px);
+}
+
+/* Ссылка под формой */
+.auth-link {
+  display: inline-block;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.95em;
+  color: #d32f2f;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+/* Ховер на ссылку */
+.auth-link:hover {
+  color: #a00000;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 768px) {
+  .auth-main {
+    margin-top: 60px;
+    min-height: calc(100vh - 60px);
+    padding: 15px;
+  }
+  
+  .auth-container {
+    padding: 30px 20px;
+    max-width: 100%;
+  }
+}
+
+@media (max-height: 700px) {
+  .auth-main {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+}

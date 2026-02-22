@@ -1,12 +1,14 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/archive.css">
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'; ?>
+    <link rel="stylesheet" href="/css/footer.css">
     <title>Архив фотографий</title>
 </head>
 <body>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'; ?>
     <section class="gallery">
         <div class="container">
             <h2 class="section-title">Архив фотографий</h2>
@@ -192,6 +194,8 @@
             </div>
         </div>
     </section>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/templates/footer.php'; ?>
+
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>

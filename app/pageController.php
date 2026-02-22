@@ -4,17 +4,17 @@ class PageController
     // === ОСНОВНЫЕ СТРАНИЦЫ (pages) ===
     public function index()
     {
-        include ROOT_PATH . '/pages/index.html';
+        include ROOT_PATH . '/pages/index.php';
     }
 
     public function auto()
     {
-        include ROOT_PATH . '/pages/sign-in.html';
+        include ROOT_PATH . '/pages/sign-in.php';
     }
 
     public function reg()
     {
-        include ROOT_PATH . '/pages/sign-up.html';
+        include ROOT_PATH . '/pages/sign-up.php';
     }
 
     public function profile()
@@ -25,17 +25,17 @@ class PageController
 
     public function news()
     {
-        include ROOT_PATH . '/pages/news.html';
+        include ROOT_PATH . '/pages/news.php';
     }
 
     public function archive()
     {
-        include ROOT_PATH . '/pages/archive.html';
+        include ROOT_PATH . '/pages/archive.php';
     }
 
     public function heroes()
     {
-        include ROOT_PATH . '/pages/heroes.html';
+        include ROOT_PATH . '/pages/heroes.php';
     }
 
     public function signIn()

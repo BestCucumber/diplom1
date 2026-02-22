@@ -5,26 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/news.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
 </head>
 <body>
-<header>
-    <div class="container header-container">
-        <nav class="menu">
-            <a href="/#hero">ГЛАВНАЯ</a>
-            <a href="/#ex">ЭКСПОЗИЦИЯ</a>
-            <a href="/#heroes" class="active">ИСТОРИИ ГЕРОЕВ</a>
-            <a href="/#calendar">ДАТЫ</a>
-            <a href="/#kamyshin">КАМЫШИН</a>
-            <a href="/#archive">АРХИВ</a>
-            <a href="/#about">О МУЗЕЕ</a>
-            <a href="/#contact">КОНТАКТЫ</a>
-            <a href="/#news">НОВОСТИ</a>
-        </nav>
-        <div class="auth-buttons">
-            <button class="btn"><a href="/auto">Войти</a></button>
-        </div>
-    </div>
-</header>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'; ?>
 
 <div class="news-container">
   <h2>НОВОСТИ</h2>
@@ -124,5 +109,8 @@
     </div>
   </div>
 </div>
+
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/templates/footer.php'; ?>
+
 </body>
 </html>
